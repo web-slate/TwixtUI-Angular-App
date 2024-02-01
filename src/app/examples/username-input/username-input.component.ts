@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { InputSingleLineComponent } from '../input-single-line/input-single-line.component';
+import { InputSingleLineComponent } from 'TwixtUI/input-single-line/input-single-line.component';
 
 @Component({
   selector: 'app-user-name-input',
