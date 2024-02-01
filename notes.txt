@@ -1,0 +1,8 @@
+Errors
+
+
+Can't bind to 'ngClass' since it isn't a known property of 'header'
+import { CommonModule } from '@angular/common';
+imports: [CommonModule],
+
+
