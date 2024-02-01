@@ -1,1 +1,8 @@
-<p>username-input works!</p>
+<app-input-single-line 
+  label="User Name" 
+  [value]="value" 
+  (valueChange)="handleValueChange($event)" 
+  (blur)="handleBlur()" 
+  [error]="error"
+  [warning]="warning">
+</app-input-single-line>
