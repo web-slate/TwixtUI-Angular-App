@@ -1,0 +1,3 @@
+[submodule "src/app/TwixtUI"]
+	path = src/app/TwixtUI
+	url = https://github.com/web-slate/TwixtUI.git
