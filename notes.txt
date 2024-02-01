@@ -6,3 +6,4 @@ import { CommonModule } from '@angular/common';
 imports: [CommonModule],
 
 
+The `*ngIf` directive was used in the template, but neither the `NgIf` directive nor the `CommonModule` was imported. Use Angular's built-in control flow @if or make sure that either the `NgIf` directive or the `CommonModule` is included in the `@Component.imports` array of this component.
