@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:TwixtUI-Angular-App": "node dist/twixt-ui-angular-app/server/server.mjs"
+    "serve:ssr:TwixtUI-Angular-App": "node dist/twixt-ui-angular-app/server/server.mjs",
+    "deploy": "npx angular-cli-ghpages --dir=dist/twixt-ui-angular-app/browser"
   },
   "private": true,
   "dependencies": {
