@@ -7,6 +7,7 @@ import { TwixtAlertComponent } from 'TwixtUI/twixt-alert/twixt-alert.component';
 import { TwixtButtonComponent } from 'TwixtUI/twixt-button/twixt-button.component';
 import { TwixtCheckboxComponent } from 'TwixtUI/twixt-checkbox/twixt-checkbox.component';
 import { TwixtDialogComponent } from 'TwixtUI/twixt-dialog/twixt-dialog.component';
+import { TwixtHeaderComponent } from 'TwixtUI/twixt-header/twixt-header.component';
 
 @Component({
   selector: 'app-hub',
@@ -18,7 +19,8 @@ import { TwixtDialogComponent } from 'TwixtUI/twixt-dialog/twixt-dialog.componen
     TwixtAlertComponent,
     TwixtButtonComponent,
     TwixtCheckboxComponent,
-    TwixtDialogComponent
+    TwixtDialogComponent,
+    TwixtHeaderComponent
   ],
   templateUrl: './hub.component.html',
   styleUrl: './hub.component.scss'
@@ -27,6 +29,11 @@ export class HubComponent {
   title = 'Hub Page Title';
   subTitle = 'Hub Page Sub Title';
   showDialog = false; // Control the display of the dialog
+
+  announcementObject = {
+    title: 'Warning!',
+    desc: 'This is a warning alert.'
+  };
 
   constructor(private router: Router) { }
 
