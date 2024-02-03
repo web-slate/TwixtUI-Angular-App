@@ -6,6 +6,7 @@ import { UserNameInputComponent } from '../examples/username-input/username-inpu
 import { TwixtAlertComponent } from 'TwixtUI/twixt-alert/twixt-alert.component';
 import { TwixtButtonComponent } from 'TwixtUI/twixt-button/twixt-button.component';
 import { TwixtCheckboxComponent } from 'TwixtUI/twixt-checkbox/twixt-checkbox.component';
+import { TwixtDialogComponent } from 'TwixtUI/twixt-dialog/twixt-dialog.component';
 
 @Component({
   selector: 'app-hub',
@@ -16,7 +17,8 @@ import { TwixtCheckboxComponent } from 'TwixtUI/twixt-checkbox/twixt-checkbox.co
     UserNameInputComponent,
     TwixtAlertComponent,
     TwixtButtonComponent,
-    TwixtCheckboxComponent
+    TwixtCheckboxComponent,
+    TwixtDialogComponent
   ],
   templateUrl: './hub.component.html',
   styleUrl: './hub.component.scss'
@@ -24,6 +26,7 @@ import { TwixtCheckboxComponent } from 'TwixtUI/twixt-checkbox/twixt-checkbox.co
 export class HubComponent {
   title = 'Hub Page Title';
   subTitle = 'Hub Page Sub Title';
+  showDialog = false; // Control the display of the dialog
 
   constructor(private router: Router) { }
 
@@ -39,5 +42,10 @@ export class HubComponent {
   // Define a noop function
   noopCheckHandler(isChecked: boolean): void {
     // This function does nothing
+  }
+
+  setToShowDialog(value: boolean): void {
+    console.log('setToShowDialog');
+    this.showDialog = value;
   }
 }
