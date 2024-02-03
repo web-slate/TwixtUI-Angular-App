@@ -8,6 +8,7 @@ import { TwixtButtonComponent } from 'TwixtUI/twixt-button/twixt-button.componen
 import { TwixtCheckboxComponent } from 'TwixtUI/twixt-checkbox/twixt-checkbox.component';
 import { TwixtDialogComponent } from 'TwixtUI/twixt-dialog/twixt-dialog.component';
 import { TwixtHeaderComponent } from 'TwixtUI/twixt-header/twixt-header.component';
+import { TwixtCommentSystemComponent } from 'TwixtUI/twixt-comment-system/twixt-comment-system.component';
 
 @Component({
   selector: 'app-hub',
@@ -20,7 +21,8 @@ import { TwixtHeaderComponent } from 'TwixtUI/twixt-header/twixt-header.componen
     TwixtButtonComponent,
     TwixtCheckboxComponent,
     TwixtDialogComponent,
-    TwixtHeaderComponent
+    TwixtHeaderComponent,
+    TwixtCommentSystemComponent
   ],
   templateUrl: './hub.component.html',
   styleUrl: './hub.component.scss'
