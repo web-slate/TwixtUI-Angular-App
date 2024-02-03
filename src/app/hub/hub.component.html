@@ -1,4 +1,5 @@
-<twixt-dialog *ngIf="showDialog" title="Deactivate account" desc="Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.">
+<twixt-dialog *ngIf="showDialog" title="Deactivate account"
+  desc="Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.">
   <twixt-button overwriteClass="px-4 py-2 ml-2 bg-indigo-500 text-white rounded-md" (click)="setToShowDialog(false)">
     Deactivate
   </twixt-button>
@@ -9,10 +10,16 @@
 
 <div className="flex h-screen bg-green-300">
   <div className="flex-1 flex flex-col overflow-hidden">
-    <twixt-alert title="Warning!" desc="This is a warning alert."></twixt-alert>
-    <app-sample-header></app-sample-header>
+    <!-- <app-sample-header></app-sample-header> -->
+    <twixt-header headerClass="bg-blue-300" [announceMent]="announcementObject">
+      App
+      <ng-template #rightBlock>
+        <!-- Content for right block goes here -->
+        <button class="some-button-class">Right Block Button</button>
+      </ng-template>
+    </twixt-header>
     <div className="flex h-full">
-      
+
       <h1>{{ title }}</h1>
       <p>{{ subTitle }}</p>
       <app-user-name-input></app-user-name-input>
