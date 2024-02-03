@@ -6,6 +6,10 @@
       <h1>{{ title }}</h1>
       <p>{{ subTitle }}</p>
       <app-user-name-input></app-user-name-input>
+      <twixt-checkbox (onChange)="noopCheckHandler($event)"></twixt-checkbox>
+      <twixt-button (onClick)="noopClickHandler($event)">
+        Submit
+      </twixt-button>
     </div>
   </div>
 </div>
