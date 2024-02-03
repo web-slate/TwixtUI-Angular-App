@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "build-gh": "ng build --configuration production --base-href=https://web-slate.github.io/TwixtUI-Angular-App/",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:TwixtUI-Angular-App": "node dist/twixt-ui-angular-app/server/server.mjs",
