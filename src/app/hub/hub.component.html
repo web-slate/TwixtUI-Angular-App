@@ -1,3 +1,15 @@
+<twixt-modal *ngIf="showModal" title="Modal Title">
+  <div modalBody>
+    <!-- Content for the modal body goes here -->
+    <p>This is the content of the modal. You can add any content here. Lorem ipsum dolor sit amet</p>
+  </div>
+  <div modalFooter>
+    <!-- Content for the modal footer goes here -->
+    <button class="some-button-class">Close</button>
+  </div>
+</twixt-modal>
+
+
 <twixt-dialog *ngIf="showDialog" title="Deactivate account"
   desc="Are you sure you want to deactivate your account? All of your data will be permanently removed. This action cannot be undone.">
   <twixt-button overwriteClass="px-4 py-2 ml-2 bg-indigo-500 text-white rounded-md" (click)="setToShowDialog(false)">
@@ -23,9 +35,19 @@
       <h1>{{ title }}</h1>
       <p>{{ subTitle }}</p>
       <app-user-name-input></app-user-name-input>
-      <twixt-button overwriteClass="px-4 py-2 bg-indigo-500 text-white rounded-md" (onClick)="setToShowDialog(true)">
-        Open Dialog
-      </twixt-button>
+      <div>
+        <twixt-button overwriteClass="px-4 py-2 bg-indigo-500 text-white rounded-md" (onClick)="setToShowDialog(true)">
+          Open Dialog
+        </twixt-button>
+        <br />
+        <br />
+      </div>
+
+      <div>
+        <twixt-button overwriteClass="px-4 py-2 bg-indigo-500 text-white rounded-md" (onClick)="setToShowModal(true)">
+          Open Modal
+        </twixt-button>
+      </div>
       <twixt-comment-system></twixt-comment-system>
     </div>
   </div>

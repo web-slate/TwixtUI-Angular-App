@@ -9,6 +9,7 @@ import { TwixtCheckboxComponent } from 'TwixtUI/twixt-checkbox/twixt-checkbox.co
 import { TwixtDialogComponent } from 'TwixtUI/twixt-dialog/twixt-dialog.component';
 import { TwixtHeaderComponent } from 'TwixtUI/twixt-header/twixt-header.component';
 import { TwixtCommentSystemComponent } from 'TwixtUI/twixt-comment-system/twixt-comment-system.component';
+import { TwixtModalComponent } from 'TwixtUI/twixt-modal/twixt-modal.component';
 
 @Component({
   selector: 'app-hub',
@@ -22,7 +23,8 @@ import { TwixtCommentSystemComponent } from 'TwixtUI/twixt-comment-system/twixt-
     TwixtCheckboxComponent,
     TwixtDialogComponent,
     TwixtHeaderComponent,
-    TwixtCommentSystemComponent
+    TwixtCommentSystemComponent,
+    TwixtModalComponent
   ],
   templateUrl: './hub.component.html',
   styleUrl: './hub.component.scss'
@@ -31,6 +33,7 @@ export class HubComponent {
   title = 'Hub Page Title';
   subTitle = 'Hub Page Sub Title';
   showDialog = false; // Control the display of the dialog
+  showModal = false; // Control the display of the modal
 
   announcementObject = {
     title: 'Warning!',
@@ -54,7 +57,10 @@ export class HubComponent {
   }
 
   setToShowDialog(value: boolean): void {
-    console.log('setToShowDialog');
     this.showDialog = value;
+  }
+
+  setToShowModal(value: boolean): void {
+    this.showModal = value;
   }
 }
