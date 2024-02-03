@@ -10,7 +10,8 @@
     "test": "ng test",
     "serve:ssr:TwixtUI-Angular-App": "node dist/twixt-ui-angular-app/server/server.mjs",
     "deploy": "npx angular-cli-ghpages --dir=dist/twixt-ui-angular-app/browser",
-    "init-ui": "git submodule add --force https://github.com/web-slate/TwixtUI.git src/app/TwixtUI"
+    "init-ui": "git submodule add --force https://github.com/web-slate/TwixtUI.git src/app/TwixtUI",
+    "update-ui": "git submodule update --remote --merge"
   },
   "private": true,
   "dependencies": {
