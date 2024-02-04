@@ -9,7 +9,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "serve:ssr:TwixtUI-Angular-App": "node dist/twixt-ui-angular-app/server/server.mjs",
-    "deploy": "npx angular-cli-ghpages --dir=dist/twixt-ui-angular-app/browser",
+    "deploy": "npm run build-gh && npx angular-cli-ghpages --dir=dist/twixt-ui-angular-app/browser",
     "init-ui": "git submodule add --force https://github.com/web-slate/TwixtUI.git src/app/TwixtUI",
     "update-ui": "git submodule update --remote --merge && git add . && git commit -m \"submodule: sync-up\" && git push origin main"
   },
