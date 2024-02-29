@@ -10,6 +10,7 @@ import { TwixtDialogComponent } from 'TwixtUI/twixt-dialog/twixt-dialog.componen
 import { TwixtHeaderComponent } from 'TwixtUI/twixt-header/twixt-header.component';
 import { TwixtCommentSystemComponent } from 'TwixtUI/twixt-comment-system/twixt-comment-system.component';
 import { TwixtModalComponent } from 'TwixtUI/twixt-modal/twixt-modal.component';
+import { TwixtLeftSidebar } from 'TwixtUI/twixt-left-sidebar/twixt-left-sidebar.component';
 
 @Component({
   selector: 'app-hub',
@@ -24,7 +25,8 @@ import { TwixtModalComponent } from 'TwixtUI/twixt-modal/twixt-modal.component';
     TwixtDialogComponent,
     TwixtHeaderComponent,
     TwixtCommentSystemComponent,
-    TwixtModalComponent
+    TwixtModalComponent,
+    TwixtLeftSidebar
   ],
   templateUrl: './hub.component.html',
   styleUrl: './hub.component.scss'
@@ -34,6 +36,7 @@ export class HubComponent {
   subTitle = 'Hub Page Sub Title';
   showDialog = false; // Control the display of the dialog
   showModal = false; // Control the display of the modal
+  isSidebarOpen = false;
 
   announcementObject = {
     title: 'Warning!',
@@ -44,6 +47,14 @@ export class HubComponent {
 
   navigateTo(path: string) {
     this.router.navigate([path]);
+  }
+
+  handleHamburgerClick(){
+    this.isSidebarOpen = true;
+  }
+
+  handleSidebarBlurEvent(){
+    this.isSidebarOpen = false;
   }
 
   // Define a noop function
