@@ -25,17 +25,23 @@
 <div className="flex h-screen bg-green-300">
   <div className="flex-1 flex flex-col overflow-hidden">
     <!-- <app-sample-header></app-sample-header> -->
-    <twixt-header headerClass="bg-blue-300" [announceMent]="announcementObject">
+    <twixt-header headerClass="bg-blue-300" [announceMent]="announcementObject" (onHamburgerClick)="handleHamburgerClick()">
       App
       <ng-template #rightBlock>
         <!-- Content for right block goes here -->
         <button class="some-button-class">Right Block Button</button>
       </ng-template>
     </twixt-header>
+    <twixt-left-sidebar [openDrawer]="isSidebarOpen" (onBlurEvent)="handleSidebarBlurEvent()">
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Home</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">About</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Services</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Contact</a>
+    </twixt-left-sidebar>            
     <div className="flex h-full">
 
       <h1>{{ title }}</h1>
-      <p>{{ subTitle }}</p>
+      <p>{{ subTitle }} {{isSidebarOpen}}</p>
       <app-user-name-input></app-user-name-input>
       <div>
         <twixt-button overwriteClass="px-4 py-2 bg-indigo-500 text-white rounded-md" (onClick)="setToShowDialog(true)">
